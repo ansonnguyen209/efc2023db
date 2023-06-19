@@ -30,7 +30,7 @@ class dbUil {
         if (err) {
           reject(err);
         }
-        var checkFinal = rows.indexOf(s => s.TimeLocation == "[Final] 7B, 18:30 Thu Jun 22 2023");
+        var checkFinal = rows.findIndex(s => s.TimeLocation == "[Final] 7B, 18:30 Thu Jun 22 2023");
         if (checkFinal == -1) {
           rows.push({
             "Id": 99,
